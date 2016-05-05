@@ -1,0 +1,20 @@
+<html>
+  <link rel="stylesheet" type="text/css" href="theme.css">
+  <div class="holder">
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="txt">
+      <h1>Pagina de Juan Jose Garcia</h1>
+      <img src="http://bit.ly/1SMaWKu" width=10%>
+      <table>
+        <tr>
+          <td><a href="http://commonzenmedia.com">CommonZenMedia</a></td>
+          <td><a href="http://blacrkiverdata.com">BlackRiver</a></td>
+          <td><a href="https://github.com/deadlybunny24">DeadlyBunny24</a></td>
+        </tr>
+      </table>
+      <p>Usando CSS solamente</p>
+    </div>
+  </div>
+</html>
