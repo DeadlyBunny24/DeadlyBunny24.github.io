@@ -100,10 +100,13 @@ p {
   margin-top: 56px;
 }
 table{
-width: 50%;
-margin-left:auto;
-margin-right:auto;
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .bambs{
-padding-bottom: 30px;
+  padding-bottom: 30px;
+}
+.github{
+  padding-top: 30px;
 }
