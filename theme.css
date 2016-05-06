@@ -8,7 +8,7 @@ body {
 .first,
 .second,
 .third {
-  height: 50vh;
+  height: 40vh;
   width: 100vw;
 }
 .first,
@@ -84,7 +84,7 @@ body {
   }
 
 .txt {
-  margin-top: calc(50vh - 203px);
+  margin-top: calc(50vh - 253px);
   position: absolute;
   width: 100%;
   z-index: 1000;
