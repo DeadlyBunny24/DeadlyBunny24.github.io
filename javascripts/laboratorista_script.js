@@ -4,10 +4,8 @@ $( document ).ready(function() {
 
 function init(){
 		//Laboratorista
-		var lab = jQuery.parseJSON('{"lista":[\
-		{"paciente":"paciente_1","centro":"centro_1","examen":"examen_1", "estado":"estado_1"},\
-		{"paciente":"paciente_2","centro":"centro_2","examen":"examen_2","estado":"estado_2"}\
-		]}');
+		var lab = $.getJSON( "ajax/test.json");
+	
 	
 	//Comportamiento de los exámenes
 	lab.lista.forEach(function(item){
