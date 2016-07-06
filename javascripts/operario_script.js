@@ -1,13 +1,14 @@
 ﻿$( document ).ready(function() {
-        init();
+		var ope = null;
+		$.getJSON("json/operario.JSON",function(response){
+			ope = response;
+		});	        
+		init();
     });
 	
 // Objetos de datos
 //Operario
-var ope = null;
-		$.getJSON("json/operario.JSON",function(response){
-			ope = response;
-		});	
+
 	
 	
 function init(){
