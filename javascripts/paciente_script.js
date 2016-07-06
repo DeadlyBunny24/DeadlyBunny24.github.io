@@ -11,21 +11,21 @@ function init(){
 	
 	// Objetos de datos
 		//Examenes
-		var exa = null;
-		$.getJSON("json/examenes.JSON",function(response){
+		var exa;
+		$.getJSON("../json/examenes.JSON",function(response){
 			console.log(response);
 			console.log(response.lista);
 		});
 				
 		//Sucursales
-		var suc = null;
-		$.getJSON("json/sucursales.JSON",function(response){
+		var suc;
+		$.getJSON("../json/sucursales.JSON",function(response){
 			suc = response;
 		});
 	
 		//Datos usuario
-		var user = null;
-		$.getJSON("json/examenes.JSON",function(response){
+		var user;
+		$.getJSON("../json/examenes.JSON",function(response){
 			user = response;
 		});
 		

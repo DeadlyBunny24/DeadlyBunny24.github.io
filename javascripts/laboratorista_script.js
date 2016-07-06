@@ -4,8 +4,8 @@ $( document ).ready(function() {
 
 function init(){
 		//Laboratorista
-		var lab = null;
-		$.getJSON("json/examenes.JSON",function(response){
+		var lab;
+		$.getJSON("../json/examenes.JSON",function(response){
 			lab = response;
 		});
 	
