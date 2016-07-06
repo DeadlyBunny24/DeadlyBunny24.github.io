@@ -5,7 +5,7 @@ $( document ).ready(function() {
 function init(){
 		//Laboratorista
 		var lab;
-		$.getJSON("../json/examenes.JSON",function(response){
+		$.getJSON("../json/laboratorio.JSON",function(response){
 			lab = response;
 		});
 	

@@ -9,12 +9,21 @@ function init(){
 
 
 	
-	// Objetos de datos
+		// Objetos de datos
 		//Examenes
 		var exa;
 		$.getJSON("../json/examenes.JSON",function(response){
-			console.log(response);
-			console.log(response.lista);
+			exa=response;
+			exa.examenes.forEach(function(item){
+				$("#examenes_contenido").append("<tr>");
+				$("#examenes_contenido tr:last-child").append("<td>"+item.tipo+"</td>");
+				$("#examenes_contenido tr:last-child").append("<td>"+item.fecha+"</td>");
+				if(item.estado=="estado_1"){
+					$("#examenes_contenido tr:last-child").append("<td><div id="+"'circle_espera'"+"></div></td>");
+				}else{
+					$("#examenes_contenido tr:last-child").append("<td><div id="+"'circle_completo'"+"></div></td>");
+				}	
+			});	
 		});
 				
 		//Sucursales
@@ -25,7 +34,7 @@ function init(){
 	
 		//Datos usuario
 		var user;
-		$.getJSON("../json/examenes.JSON",function(response){
+		$.getJSON("../json/usuario.JSON",function(response){
 			user = response;
 		});
 		
@@ -90,16 +99,7 @@ function init(){
 	});	
 	
 	//Comportamiento de los exámenes
-	exa.examenes.forEach(function(item){
-		$("#examenes_contenido").append("<tr>");
-		$("#examenes_contenido tr:last-child").append("<td>"+item.tipo+"</td>");
-		$("#examenes_contenido tr:last-child").append("<td>"+item.fecha+"</td>");
-		if(item.estado=="estado_1"){
-			$("#examenes_contenido tr:last-child").append("<td><div id="+"'circle_espera'"+"></div></td>");
-		}else{
-			$("#examenes_contenido tr:last-child").append("<td><div id="+"'circle_completo'"+"></div></td>");
-		}	
-	});	
+	
 	
 	//Comportamiento de menú de sucursales
 	
