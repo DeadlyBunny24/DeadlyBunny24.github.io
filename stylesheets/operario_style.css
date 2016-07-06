@@ -1,0 +1,12 @@
+html, body{ height: 100%;}
+#menu_sucursales ul{margin-top:16px;}
+#navegacion {min-width:100%;margin-left:0px;}
+#contenedor{height:100%;}
+#contenedor_general{height:90%;}
+#contenedor_info{height:100%;padding-left:0px;}
+#contenedor_datos{height:100%;}
+.panel-body form{width:100%; }
+#container_datos{ width:50%;box-shadow: 0 0 3px #888888;}
+
+
+

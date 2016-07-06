@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<title>Salud Primero S.A.</title>
+		
+		<meta charset="ISO-8859-1">
+		<meta name="description" content="Pag. principal de un paciente">
+		<meta name="keywords" content="paciente, salud, primero, sa">
+		
+		<!-- Hojas de estilo-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"  >
+		<link href="base_structure.css" rel="stylesheet">
+		<link href="bootstrap-edit.css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/paciente_style.css">
+		<style type="text/css">
+/*
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    color: #fff;
+}
+
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+label {
+    color: #999;
+}
+
+.panel, .panel-heading, .panel-group .panel {
+    border-radius: 0;
+}
+
+		.panel-blue {
+    border-color: #3498db;
+}
+
+.panel-blue > .panel-heading {
+    background: #3498db;
+}
+
+
+.form-control {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+.btn-u.btn-u-blue {
+    background: #3498db;
+}
+.btn-u {
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 6px 13px;
+    position: relative;
+    background: #72c02c;
+    white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.form-horizontal {
+    border-radius: 0;
+}
+
+*/
+		</style>
+
+    </style>
+	</head>
+
+	
+	
+	<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+	<body>
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WAD-SaludPrimeroSA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Profile</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div id= "menu_sucursales" class="col-sm-3 col-md-2 sidebar">
+          <ul class="menu nav nav-sidebar">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Examenes <span class="sr-only">(current)</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Sucursales</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ">
+	        <div class="row">
+	        	<ol class="breadcrumb" style="    margin-bottom: 0px;">
+				  <li><a href="active">Home</a></li>
+				  <!-- <li><a href="#">Library</a></li>
+				  <li class="active">Data</li> -->
+				</ol>
+	        </div>
+	        
+	        <div class="row">
+		        <div class=" main">
+				
+
+				<div class="panel panel-blue margin-bottom-40">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-tasks"></i> Basic Form</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="margin-bottom-40" role="form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn-u btn-u-blue">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-blue margin-bottom-40">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-tasks"></i> Basic Form</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+                                <div class="col-lg-10">
+                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
+                                <div class="col-lg-10">
+                                    <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                    <button type="submit" class="btn-u btn-u-blue">Sign in</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+		        </div>
+	        </div>
+	        
+        </div>
+      </div>
+      <footer class="footer">
+      <div class="container">
+        <p class="text-muted">DAW @ 2016</p>
+      </div>
+    </footer>
+    </div>
+
+		<!-- Scripts -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="javascripts/paciente_script.js"></script>	
+		<script src="https://maps.googleapis.com/maps/api/js?" async defer></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		
+		
+	</body>
+
+</html>

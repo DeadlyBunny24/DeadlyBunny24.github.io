@@ -1,0 +1,52 @@
+html, body{ height: 100%;}
+#menu_sucursales ul{margin-top:16px;}
+#navegacion {min-width:100%;margin-left:0px;}
+#contenedor{height:100%;}
+#contenedor_general{height:90%;}
+#contenedor_info{height:100%;padding-left:0px;}
+#contenedor_datos{height:100%;}
+#map {height: 307px;float:right; box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);}
+.carousel{height:200px;float:left;box-shadow: 0 0 3px #888888;}
+.carousel-inner{height:100%;}
+#datos_sucursal{margin-bottom:10px;background: rgba(217, 217, 217,0.3);padding-top:5px;box-shadow: 0 0 3px #888888;}
+.item{align-items:center;height:100%;}
+.carousel-inner .item img{min-width:100%;min-height:100%;flex-shrink:0;}
+#form_nombre{width:80%;}
+#form_apellido{width:80%;}
+#form_correo{width:60%;}
+#form_cedula{width:60%;}
+#form_telefono{width:60%;}
+#form_direccion{width:100%;}
+#container_datos{ width:70%;box-shadow: 0 0 3px #888888;}
+#container_datos img{height:30%; width:30%;margin-left: auto;margin-right: auto;position:relative;margin-top:auto;}
+.panel-body form{float:left;width:70%;}
+
+
+#circle_espera{
+      width: 21px;
+      height: 21px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background:  #ffff80;
+	  border-width: 0.5px;
+	  border-style: solid;
+	  border-color: black;
+	  padding-left:0px;
+	  margin-left:13px;
+    }
+	
+#circle_completo{
+      width: 21px;
+      height: 21px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background:  #66ff66;
+	  border-width: 0.5px;
+	  border-style: solid;
+	  border-color: black;
+	  margin-left:13px;
+	  padding-left:0px;
+    }	
+

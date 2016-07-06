@@ -1,0 +1,37 @@
+html, body{ height: 100%;}
+#menu_sucursales ul{margin-top:16px;}
+#navegacion {min-width:100%;margin-left:0px;}
+#contenedor{height:100%;}
+#contenedor_general{height:90%;}
+#contenedor_info{height:100%;padding-left:0px;}
+#contenedor_datos{height:100%;}
+#notificacion{height:200px;}
+
+#circle_espera{
+      width: 21px;
+      height: 21px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background:  #ffff80;
+	  border-width: 0.5px;
+	  border-style: solid;
+	  border-color: black;
+	  padding-left:0px;
+	  margin-left:13px;
+    }
+	
+#circle_completo{
+      width: 21px;
+      height: 21px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background:  #66ff66;
+	  border-width: 0.5px;
+	  border-style: solid;
+	  border-color: black;
+	  margin-left:13px;
+	  padding-left:0px;
+    }	
+

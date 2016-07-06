@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<title>Salud Primero S.A.</title>
+		
+		<meta charset="ISO-8859-1">
+		<meta name="description" content="Pag. principal de un paciente">
+		<meta name="keywords" content="paciente, salud, primero, sa">
+		
+		<!-- Hojas de estilo-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"  >
+		<link href="base_structure.css" rel="stylesheet">
+		<link href="bootstrap-edit.css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="stylesheets/operario_style.css">
+
+	</head>
+
+	
+	
+	<!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>-->
+	<body>
+		
+		<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WAD-SaludPrimeroSA</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Profile</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="contenedor" class="container-fluid">
+      <div id="contenedor_general" class="row">
+        <div id= "menu_sucursales" class="col-sm-3 col-md-2 sidebar">
+          <ul class="menu nav nav-sidebar">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>  Exámenes <span class="sr-only">(current)</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>  Generar Reportes</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Registrar</a></li>
+          </ul>
+        </div>
+        <div id="contenedor_info" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ">
+	        <div id="navegacion" class="row">
+	        	<ol class="breadcrumb" style="    margin-bottom: 0px;">
+				  <li><a href="#">Examenes</a></li>
+				  <!-- <li><a href="#">Library</a></li>
+				  <li class="active">Data</li> -->
+				</ol>
+	        </div>
+	        
+	        <div id="contenedor_datos" class="row">
+		        <div class=" main">
+					<div id="container_examenes">
+						<div>
+					  
+					  <h2 class="sub-header">Lista de Examenes</h2>
+					  <button type="button" class="btn-u btn-u-blue btn-header" data-toggle="modal" data-target="#myModal">
+					  	<span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+					  </button>
+					  </div>
+					  <div class="table-responsive table-content">
+						<table class="table table-striped">
+						  <thead>
+							<tr>
+							  <th>Paciente</th>
+							  <th>Centro</th>
+							  <th>Examen</th>
+							  <th width="20%">Acciones</th>
+							</tr>
+						  </thead>
+						  <tbody id="examenes_contenido">
+						  </tbody>
+						</table>
+					  </div>
+					</div>
+					
+					
+					<div id="container_datos">	
+						<div class="panel panel-blue margin-bottom-40">
+							<div class="panel-heading">
+								<h3 class="panel-title"><i class="fa fa-tasks"></i> Información del registro</h3>
+							</div>
+							<div class="panel-body">
+								<form class="margin-bottom-40" role="form">
+									<div class="form-group" id="form_paciente">
+										<label for="paciente">Paciente</label>
+										<input type="text" class="form-control" id="paciente" placeholder="Paciente">
+									</div>
+									<div class="form-group" id="form_centro">
+										<label for="centro">Centro</label>
+										<input type="text" class="form-control" id="centro" placeholder="Centro">
+									</div>
+									<div class="form-group" id="form_examen">
+										<label for="examen">Examen</label>
+										<input type="text" class="form-control" id="examen" placeholder="Examen">
+									</div>
+									<button id="actualizar" type="submit" class="btn-u btn-u-blue">Registrar</button>
+								</form>								
+							</div>
+						</div>
+				</div>						
+		        </div>
+	        </div>
+        </div>
+      </div>
+      <footer class="footer">
+      <div class="container">
+        <p class="text-muted">DAW @ 2016</p>
+      </div>
+    </footer>
+    </div>
+
+<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Busquedas</h4>
+		  </div>
+		  <div class="modal-body modal-body-v2">
+				<div class="tab-v2 margin-bottom-40">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#alert-1" data-toggle="tab" aria-expanded="true">Por codigo </a></li>
+							<li class=""><a href="#alert-2" data-toggle="tab" aria-expanded="false">Por cedula</a></li>
+						</ul>
+						<div class="tab-content">
+
+							<div class="tab-pane fade active in" id="alert-1">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label for="inputEmail1" class="col-lg-2 control-label">Codigo</label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" id="inputEmail1" placeholder="Codigo">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-lg-offset-2 col-lg-10">
+											<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Cerrar</button>
+											<button type="submit" class="btn-u btn-u-blue">Buscar</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="tab-pane fade" id="alert-2">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label for="inputEmail1" class="col-lg-2 control-label">Cedula </label>
+										<div class="col-lg-10">
+											<input type="text" class="form-control" id="inputEmail1" placeholder="Cedula">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-lg-offset-2 col-lg-10">
+											<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Cerrar</button>
+											<button type="submit" class="btn-u btn-u-blue">Buscar</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+		  </div>
+		  <!--
+		  <div class="modal-footer">
+			
+			<button type="button" class="btn btn-primary">Save changes</button>
+		  </div>
+		  -->
+		</div>
+	  </div>
+	</div>
+
+
+<!-- Modal -->
+	<div class="modal fade bs-example-modal-sm" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><strong>Eliminar Registro</strong></h4>
+		  </div>
+		  <div class="modal-body">
+			<h4>
+				<strong>¿ Está seguro de eliminar el registro ?</strong><br><br>
+				<strong>Paciente:</strong> <p>Paciente</p><br>
+				<strong>Examen:</strong><p> Prueba de detalle</p><br> 
+			</h4>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			<button type="button" class="btn btn-primary">Confirmar</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="modal fade bs-example-modal-sm" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel"><strong>Editar</strong></h4>
+		  </div>
+		  <div class="modal-body">
+		
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+			<button type="button" class="btn btn-primary">Actualizar</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="javascripts/operario_script.js"></script>	
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+		
+		
+		
+	</body>
+
+</html>
