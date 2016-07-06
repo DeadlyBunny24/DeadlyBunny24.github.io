@@ -6,7 +6,6 @@ function init(){
 		//Laboratorista
 		var lab = $.getJSON( "ajax/test.json");
 	
-	
 	//Comportamiento de los exámenes
 	lab.lista.forEach(function(item){
 		$("#examenes_contenido").append("<tr>");
