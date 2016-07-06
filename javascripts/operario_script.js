@@ -1,5 +1,5 @@
 ﻿$( document ).ready(function() {
-		var ope = null;
+		var ope;
 		$.getJSON("json/operario.JSON",function(response){
 			ope = response;
 		});	        
