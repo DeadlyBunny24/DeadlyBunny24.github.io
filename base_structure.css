@@ -4,7 +4,7 @@
 
 body {
   padding-top: 50px;
-}
+} 
 
 .btn {
     box-shadow: none;
@@ -38,7 +38,8 @@ body {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    /*padding: 20px;*/
+    padding: 0px;
     overflow-x: hidden;
     overflow-y: auto; 
     background-color: #f5f5f5;
@@ -76,7 +77,7 @@ body {
 }
 
 .panel {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -207,5 +208,78 @@ label {
 }
 
 .modal-body-v2 {
-  padding: 15px 0px 15px 0px;
+  padding: 0px 0px 15px 0px;
 }
+
+.btn-u.btn-u-light-green {
+    background: #79d5b3;
+}
+
+.btn-u.btn-u-aqua {
+    background: #27d7e7;
+}
+
+.btn-u.btn-u-dark-blue {
+    background: #4765a0;
+}
+
+.modal-u-content {
+    border-radius: 0;
+}
+
+.input-group-addon.border-u {
+    border-radius: 0;
+}
+
+.breadcrumb-v2 {
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.container-list-v {
+    margin-bottom: 50px;
+}
+
+.btn-success-v2 {
+    color: #fff;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+}
+
+
+.login-info {
+    display: block;
+    /*font-size: 12px;*/
+    height: 35px;
+    color: #fff;
+    border: solid transparent;
+    /*
+    border-width: 1px 0;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+        */
+    width: 100%;
+    padding: 5px 0px 0px 7px;
+    margin: 0!important;
+    border-bottom: 1px solid #e4e0e0;
+}
+
+.login-info a {
+    text-decoration: none!important;
+    
+    display: inline-block;
+    /*margin-top: 6px;
+        color: #c0bbb7;*/
+}
+
+/*
+.login-info a span+i {
+    vertical-align: middle;
+}
+.login-info>span {
+    height: 38px;
+    display: block;
+    padding: 0 10px;
+    border-bottom: 1px solid #1A1817;
+}
+    
+    */
