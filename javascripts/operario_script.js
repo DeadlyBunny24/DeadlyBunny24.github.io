@@ -10,35 +10,8 @@ function init(){
 
 	
 	// Objetos de datos
-		//Examenes
-		var exa = jQuery.parseJSON('{"examenes":[\
-		{"tipo":"tipo_1","fecha":"fecha_1","estado":"estado_1"},\
-		{"tipo":"tipo_2","fecha":"fecha_2","estado":"estado_2"}\
-		]}');
-		
-		//Sucursales
-		var suc = jQuery.parseJSON('{"lista":[\
-		{"direccion":"direccion_1","descripcion":"descripcion_1","horario":"horario_1"},\
-		{"direccion":"direccion_2","descripcion":"descripcion_2","horario":"horario_2"}\
-		]}');
-		
-		//Operario
-		var ope = jQuery.parseJSON('{"lista":[\
-		{"paciente":"paciente_1","centro":"centro_1","examen":"examen_1"},\
-		{"paciente":"paciente_2","centro":"centro_2","examen":"examen_2"}\
-		]}');
-		
-		//Laboratorista
-		var lab = jQuery.parseJSON('{"lista":[\
-		{"paciente":"paciente_1","centro":"centro_1","examen":"examen_1", "estado":"estado_1"},\
-		{"paciente":"paciente_2","centro":"centro_2","examen":"examen_2","estado":"estado_2"}\
-		]}');
-	
-		//Datos usuario
-		var user = jQuery.parseJSON('{"datos":[\
-		{"nombre":"nombre_1","apellido":"Apellido_1","correo":"correo@espol", "cedula":"111111111", "direccion":"Direccion_1","telefono":"000000000"},\
-		{"nombre":"nombre_2","apellido":"Apellido_2","correo":"correo@espol", "cedula":"111111111", "direccion":"Direccion_2","telefono":"000000000"}\
-		]}');
+	//Operario
+		var ope = $.getJSON("json/operario.JSON");
 		
 
 	

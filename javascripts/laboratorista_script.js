@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 function init(){
 		//Laboratorista
-		var lab = $.getJSON( "ajax/test.json");
+		var lab = $.getJSON("json/laboratorio.JSON");
 	
 	//Comportamiento de los exámenes
 	lab.lista.forEach(function(item){
