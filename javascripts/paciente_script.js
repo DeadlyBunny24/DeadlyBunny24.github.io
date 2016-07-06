@@ -13,7 +13,8 @@ function init(){
 		//Examenes
 		var exa = null;
 		$.getJSON("json/examenes.JSON",function(response){
-			exa = response;
+			console.log(response);
+			console.log(response.lista);
 		});
 				
 		//Sucursales

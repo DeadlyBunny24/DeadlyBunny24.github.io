@@ -1,7 +1,9 @@
 ﻿$( document ).ready(function() {
         init();
     });
-
+	
+// Objetos de datos
+//Operario
 var ope = null;
 		$.getJSON("json/operario.JSON",function(response){
 			ope = response;
@@ -13,15 +15,6 @@ function init(){
 	$("#container_sucursales").hide();
 	$("#container_datos").hide();
 
-
-	
-	// Objetos de datos
-	//Operario
-		
-		
-
-		
-	
 	//Comportamiento del menú principal
 	$(".menu li:nth-child(2) a").click(function(){
 		$(".breadcrumb li h2").text("Reportes");
