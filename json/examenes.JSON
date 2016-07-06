@@ -1,5 +1,5 @@
 {"examenes":[
-		{"tipo":"tipo_1","descripcion":"descripcion_1","estado":"estado_1";},
-		{"tipo":"tipo_2","descripcion":"descripcion_2","estado":"estado_2";}
+		{"tipo":"tipo_1","descripcion":"descripcion_1","estado":"estado_1"},
+		{"tipo":"tipo_2","descripcion":"descripcion_2","estado":"estado_2"}
 		]
 }
