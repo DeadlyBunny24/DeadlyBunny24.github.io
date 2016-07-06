@@ -9,5 +9,28 @@ html, body{ height: 100%;font-family: 'Source Sans Pro', sans-serif;}
 #container_datos{ width:50%;box-shadow: 0 0 3px #888888;}
 .breadcrumb h2{color:#428bca;}
 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.label {
+  text-anchor: middle;
+}
+
+.label rect {
+  fill: white;
+}
+
+.label-key {
+  font-weight: bold;
+}
 
 

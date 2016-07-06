@@ -1,12 +1,12 @@
-html, body{ height: 100%;}
+html, body{ height: 100%;font-family: 'Source Sans Pro', sans-serif;}
 #menu_sucursales ul{margin-top:16px;}
 #navegacion {min-width:100%;margin-left:0px;}
 #contenedor{height:100%;}
 #contenedor_general{height:90%;}
 #contenedor_info{height:100%;padding-left:0px;}
-#contenedor_datos{height:100%;}
+#contenedor_datos{height:100%;background-color: whitesmoke;}
 #notificacion{height:200px;}
-
+.breadcrumb h2{color:#428bca;}
 #circle_espera{
       width: 21px;
       height: 21px;
