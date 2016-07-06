@@ -140,5 +140,4 @@ function init(){
 			  .attr("width", function(d) { return d.width + 2 * labelPadding; })
 			  .attr("height", function(d) { return d.height + 2 * labelPadding; });
 		});
-						  
 }

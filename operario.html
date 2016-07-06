@@ -15,7 +15,8 @@
 		<link href="bootstrap-edit.css" rel="stylesheet">
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="stylesheets/operario_style.css">
-
+		<link rel="stylesheet" type="text/css" href="bar-grupo.css">
+        <link rel="stylesheet" type="text/css" href="bar-2.css">
 	</head>
 	<body>
 		
@@ -82,7 +83,7 @@
 					</div>
 					
 					<div id="container_sucursales">
-			        <div class="tab-v2 margin-bottom-40">
+			        <div class="tab-v2 margin-bottom-40 container-list-v">
 	                    <ul class="nav nav-tabs">
 	                        <li class="active"><a href="#alert-1" data-toggle="tab" aria-expanded="true">Muestras por mes </a></li>
 	                        <li class=""><a href="#alert-2" data-toggle="tab" aria-expanded="false">Por Enfermedad</a></li>
@@ -92,34 +93,68 @@
 	                    <div class="tab-content">
 
 	                        <div class="tab-pane fade active in" id="alert-1">
-	                            
-					<div id="container_examenes">
-					  <h2 class="sub-header">Lista de Exámenes</h2>
-					  <div class="table-responsive table-content">
+	                         
+                                <div id="container_examenes">
+					              <h2 class="sub-header">Grafico por mes</h2>                                    
+                                  <button type="button" class="btn-u btn-u-dark-blue btn-header" data-toggle="modal" data-target="#myModal">
+					  	            <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Exportar
+					              </button>
+					              <button type="button" class="btn-u btn-u-blue btn-header" style="margin-right: 5px;"
+                                           data-toggle="modal" data-target="#myModalMeses">
+					  	            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Filtrar
+					              </button>
+					              <div id="grafico_meses" class="table-responsive table-content">
 						
-					<svg width="960" height="300"></svg>
-					  </div>
-					</div>
+					              </div>
+					            </div>
 	                        </div>
 
 	                        <div class="tab-pane fade" id="alert-2">
-	                            <form class="form-horizontal" role="form">
-		                            <div class="form-group">
-		                                <label for="inputEmail1" class="col-lg-2 control-label">Cedula </label>
-		                                <div class="col-lg-10">
-		                                    <input type="text" class="form-control" id="inputEmail1" placeholder="Cedula">
-		                                </div>
-		                            </div>
-		                            <div class="form-group">
-		                                <div class="col-lg-offset-2 col-lg-10">
-		                                	<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Cerrar</button>
-		                                    <button type="submit" class="btn-u btn-u-blue">Buscar</button>
-		                                </div>
-		                            </div>
-		                        </form>
+
+                                <div id="container_examenes">
+					              <h2 class="sub-header">Grafico por enfermedades</h2>
+                                    <button type="button" class="btn-u btn-u-dark-blue btn-header" data-toggle="modal" data-target="#myModal">
+					  	            <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Exportar
+					              </button>
+					              <button type="button" class="btn-u btn-u-blue btn-header" style="margin-right: 5px;" data-toggle="modal" data-target="#myModalEnfermedad">
+					  	            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Filtrar
+					              </button>
+					              <div id="grafico_enfermedades" class="table-responsive table-content">
+						
+					              </div>
+					            </div>
+	                            
 	                        </div>
-	                        <div class="tab-pane fade" id="alert-3"></div>
-	                        <div class="tab-pane fade" id="alert-4"></div>
+	                        <div class="tab-pane fade" id="alert-3">
+                                <div id="container_examenes">
+					              <h2 class="sub-header">Grafico por laboratorio</h2>
+                                    <button type="button" class="btn-u btn-u-dark-blue btn-header" data-toggle="modal" data-target="#myModal">
+					  	            <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Exportar
+					              </button>
+					              <button type="button" class="btn-u btn-u-blue btn-header" style="margin-right: 5px;" 
+                                    data-toggle="modal" data-target="#myModalLaboratorios">
+					  	            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Filtrar
+					              </button>
+					              <div id="grafico_laboratorio" class="table-responsive table-content">
+						
+					              </div>
+					            </div>
+                            </div>
+	                        <div class="tab-pane fade" id="alert-4">
+                                <div id="container_examenes">
+					              <h2 class="sub-header">Grafico por ciudades</h2>
+                                    <button type="button" class="btn-u btn-u-dark-blue btn-header" data-toggle="modal" data-target="#myModal">
+					  	            <span class="glyphicon glyphicon-export" aria-hidden="true"></span> Exportar
+					              </button>
+					              <button type="button" class="btn-u btn-u-blue btn-header" style="margin-right: 5px;" 
+                                    data-toggle="modal" data-target="#myModalCiudades">
+					  	            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Filtrar
+					              </button>
+					              <div id="grafico_ciudades" class="table-responsive table-content">
+						
+					              </div>
+					            </div>
+                            </div>
 	                    </div>
 	                </div>
 											
@@ -161,106 +196,246 @@
     </footer>
     </div>
 
-<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="myModalMeses" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
+		<div class="modal-content modal-u-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">Busquedas</h4>
+			<h4 class="modal-title" id="myModalLabel">Filtros</h4>
 		  </div>
-		  <div class="modal-body modal-body-v2">
-				<div class="tab-v2 margin-bottom-40">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#alert-1" data-toggle="tab" aria-expanded="true">Por codigo </a></li>
-							<li class=""><a href="#alert-2" data-toggle="tab" aria-expanded="false">Por cedula</a></li>
-						</ul>
-						<div class="tab-content">
-
-							<div class="tab-pane fade active in" id="alert-1">
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label for="inputEmail1" class="col-lg-2 control-label">Codigo</label>
-										<div class="col-lg-10">
-											<input type="text" class="form-control" id="inputEmail1" placeholder="Codigo">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-lg-offset-2 col-lg-10">
-											<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Cerrar</button>
-											<button type="submit" class="btn-u btn-u-blue">Buscar</button>
-										</div>
-									</div>
-								</form>
-							</div>
-
-							<div class="tab-pane fade" id="alert-2">
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label for="inputEmail1" class="col-lg-2 control-label">Cedula </label>
-										<div class="col-lg-10">
-											<input type="text" class="form-control" id="inputEmail1" placeholder="Cedula">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-lg-offset-2 col-lg-10">
-											<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Cerrar</button>
-											<button type="submit" class="btn-u btn-u-blue">Buscar</button>
-										</div>
-									</div>
-								</form>
+		  <div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Enfermedad</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todas</option>
+							<option>Enfermedad 2</option>
+							<option>Enfermedad 3</option>
+							<option>Enfermedad 4</option>
+							<option>Enfermedad 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Laboratorio</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todos</option>
+							<option>Laboratorio 2</option>
+							<option>Laboratorio 3</option>
+							<option>Laboratorio 4</option>
+							<option>Laboratorio 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha ini</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker3">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
 							</div>
 						</div>
 					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha fin</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker4">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
 		  </div>
-		  <!--
+		  
 		  <div class="modal-footer">
-			
-			<button type="button" class="btn btn-primary">Save changes</button>
+			<button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Filtrar</button>
 		  </div>
-		  -->
+		  
 		</div>
 	  </div>
 	</div>
 
-
-<!-- Modal -->
-	<div class="modal fade bs-example-modal-sm" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog modal-sm" role="document">
-		<div class="modal-content">
+	<div class="modal fade" id="myModalEnfermedad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content modal-u-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Eliminar Registro</strong></h4>
+			<h4 class="modal-title" id="myModalLabel">Filtros</h4>
 		  </div>
 		  <div class="modal-body">
-			<h4>
-				<strong>Está seguro que desea eliminar el registro?</strong><br><br>
-				<!-- <strong>Paciente:</strong> <p>Paciente</p><br>
-				<strong>Examen:</strong><p> Prueba de detalle</p><br>  -->
-			</h4>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Laboratorio</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todos</option>
+							<option>Laboratorio 2</option>
+							<option>Laboratorio 3</option>
+							<option>Laboratorio 4</option>
+							<option>Laboratorio 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha ini</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker1">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha fin</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
 		  </div>
+		  
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			<button type="button" class="btn btn-primary">Confirmar</button>
+			<button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Filtrar</button>
 		  </div>
+		  
 		</div>
 	  </div>
 	</div>
 
-	<div class="modal fade bs-example-modal-sm" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog modal-sm" role="document">
-		<div class="modal-content">
+	<div class="modal fade" id="myModalLaboratorios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content modal-u-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel"><strong>Editar</strong></h4>
+			<h4 class="modal-title" id="myModalLabel">Filtros</h4>
 		  </div>
 		  <div class="modal-body">
-		
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Enfermedad</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todos</option>
+							<option>Enfermedad 2</option>
+							<option>Enfermedad 3</option>
+							<option>Enfermedad 4</option>
+							<option>Enfermedad 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha ini</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker1">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha fin</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
 		  </div>
+		  
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-			<button type="button" class="btn btn-primary">Actualizar</button>
+			<button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Filtrar</button>
 		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="myModalCiudades" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content modal-u-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Filtros</h4>
+		  </div>
+		  <div class="modal-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Enfermedad</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todos</option>
+							<option>Enfermedad 2</option>
+							<option>Enfermedad 3</option>
+							<option>Enfermedad 4</option>
+							<option>Enfermedad 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Laboratorio</label>
+						<div class="col-lg-10">
+							<select class="form-control">
+							<option>Todos</option>
+							<option>Laboratorio 2</option>
+							<option>Laboratorio 3</option>
+							<option>Laboratorio 4</option>
+							<option>Laboratorio 5</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha ini</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker1">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail1" class="col-lg-2 control-label">Fecha fin</label>
+						<div class="col-lg-10">
+							<div class="input-group date" id="datetimepicker2">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon add-on border-u">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar" class="glyphicon glyphicon-calendar"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+		  </div>
+		  
+		  <div class="modal-footer">
+			<button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Filtrar</button>
+		  </div>
+		  
 		</div>
 	  </div>
 	</div>
@@ -271,8 +446,35 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="javascripts/operario_script.js"></script>	
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+		<script src="bar-mes.js"></script>
+        <script src="bar-emfermedad.js"></script>	
+        <script src="bar-laboratorio.js"></script>	
+        <script src="bar-ciudad.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
 		
-		
+		<script type="text/javascript">
+
+           $('#datetimepicker1').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-BR'
+      });
+      //'dd/MM/yyyy hh:mm:ss',
+      $('#datetimepicker2').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-BR'
+      });
+
+               $('#datetimepicker3').datetimepicker({
+        format: 'MM/yyyy',
+        language: 'pt-BR'
+      });
+
+      $('#datetimepicker4').datetimepicker({
+        format: 'MM/yyyy ',
+        language: 'pt-BR'
+      });
+		</script>
 		
 	</body>
 
