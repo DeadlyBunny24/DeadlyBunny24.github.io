@@ -2,6 +2,12 @@
         init();
     });
 
+var ope = null;
+		$.getJSON("json/operario.JSON",function(response){
+			ope = response;
+		});	
+	
+	
 function init(){
 	//Inicialización
 	$("#container_sucursales").hide();
@@ -11,10 +17,7 @@ function init(){
 	
 	// Objetos de datos
 	//Operario
-		var ope = null;
-		$.getJSON("json/operario.JSON",function(response){
-			ope = response;
-		});
+		
 		
 
 		
