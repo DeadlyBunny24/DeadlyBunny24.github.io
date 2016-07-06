@@ -11,8 +11,9 @@ function init(){
 	
 	// Objetos de datos
 	//Operario
+		var ope = null;
 		$.getJSON("json/operario.JSON",function(response){
-			var ope = response;
+			ope = response;
 		});
 		console.log(ope);
 
