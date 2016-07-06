@@ -11,13 +11,16 @@ function init(){
 	
 	// Objetos de datos
 		//Examenes
-		var exa = jQuery.parseJSON('{"examenes":[\
-		{"tipo":"tipo_1","fecha":"fecha_1","estado":"estado_1"},\
-		{"tipo":"tipo_2","fecha":"fecha_2","estado":"estado_2"}\
-		]}');
+		var exa = $.getJSON("json/examenes.JSON");
 		
 		//Sucursales
-		var suc = jQuery.parseJSON('{"lista":[\
+		var suc = $.getJSON("json/sucursales.JSON");
+	
+		//Datos usuario
+		var user = $.getJSON("json/usuario.JSON");
+		
+		//Sucursales
+		/* var suc = jQuery.parseJSON('{"lista":[\
 		{"direccion":"direccion_1","descripcion":"descripcion_1","horario":"horario_1"},\
 		{"direccion":"direccion_2","descripcion":"descripcion_2","horario":"horario_2"}\
 		]}');
@@ -39,7 +42,7 @@ function init(){
 		{"nombre":"nombre_1","apellido":"Apellido_1","correo":"correo@espol", "cedula":"111111111", "direccion":"Direccion_1","telefono":"000000000","img":"imagenes/user_icon.png"},\
 		{"nombre":"nombre_2","apellido":"Apellido_2","correo":"correo@espol", "cedula":"111111111", "direccion":"Direccion_2","telefono":"000000000","img":"imagenes/user_icon.png"}\
 		]}');
-		console.log(user);
+		console.log(user); */
 
 	
 	//Comportamiento del menú principal

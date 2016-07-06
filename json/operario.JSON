@@ -1,4 +1,4 @@
-{"operario":[
+{"lista":[
 		{"paciente":"paciente_1","centro":"centro_1","examen":"examen_1"},
 		{"paciente":"paciente_2","centro":"centro_2","examen":"examen_2"}
 		]}
