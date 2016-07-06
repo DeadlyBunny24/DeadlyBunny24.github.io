@@ -1,9 +1,9 @@
-$( document ).ready(function() {
+ï»¿$( document ).ready(function() {
         init();
     });
 
 function init(){
-	//Inicialización
+	//InicializaciÃ³n
 	$("#container_sucursales").hide();
 	$("#container_datos").hide();
 
@@ -12,10 +12,10 @@ function init(){
 	// Objetos de datos
 	//Operario
 		var ope = $.getJSON("json/operario.JSON");
-		
+		console.log(ope);
 
 	
-	//Comportamiento del menú principal
+	//Comportamiento del menÃº principal
 	$(".menu li:nth-child(2) a").click(function(){
 		$(".breadcrumb li h2").text("Reportes");
 		$(".menu li:nth-child(2)").siblings("li").removeClass("active");
@@ -35,7 +35,7 @@ function init(){
 	});
 
 	$(".menu li:nth-child(3) a").click(function(){
-		$(".breadcrumb li h2").text("Información de registro");
+		$(".breadcrumb li h2").text("InformaciÃ³n de registro");
 		$(".menu li:nth-child(3)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(3)").addClass("active");
 		$("#container_sucursales").hide();
