@@ -13,9 +13,9 @@ function init(){
 	//Operario
 		var ope = null;
 		$.getJSON("json/operario.JSON",function(response){
-			ope = response;
+			console.log(response);
 		});
-		console.log(ope);
+		
 
 	
 	//Comportamiento del menú principal
