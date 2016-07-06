@@ -30,12 +30,57 @@ function init(){
 		var suc;
 		$.getJSON("../json/sucursales.JSON",function(response){
 			suc = response;
+			//Comportamiento de menú de sucursales
+			$(".carousel-inner .item:first-child img").attr("src","");
+			$(".carousel-inner .item:nth-child(2) img").attr("src","");
+			$("#datos_sucursal p:first-child span").text(suc.lista[0].direccion);
+			$("#datos_sucursal p:nth-child(2) span").text(suc.lista[0].descripcion);
+			$("#datos_sucursal p:nth-child(3) span").text(suc.lista[0].horario);
+			$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_1_1.jpg");
+			$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_1_2.jpg");
+			
+			// Inicialización del API de google maps
+			initMap(-2.148726,-79.9648);	
+			//Sucursal_1
+			$(".dropdown-menu li:first-child a").click(function(){
+				$(".carousel-inner .item:first-child img").attr("src","");
+				$(".carousel-inner .item:nth-child(2) img").attr("src","");
+				$("#datos_sucursal p:first-child span").text(suc.lista[0].direccion);
+				$("#datos_sucursal p:nth-child(2) span").text(suc.lista[0].descripcion);
+				$("#datos_sucursal p:nth-child(3) span").text(suc.lista[0].horario);
+				$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_1_1.jpg");
+				$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_1_2.jpg");
+				
+				// Inicialización del API de google maps
+				initMap(-2.148726,-79.9648);
+			});
+			
+			//Sucursal_2
+			$(".dropdown-menu li:nth-child(2) a").click(function(){
+				$(".carousel-inner .item:first-child img").attr("src","");
+				$(".carousel-inner .item:nth-child(2) img").attr("src","");
+				$("#datos_sucursal p:first-child span").text(suc.lista[1].direccion);
+				$("#datos_sucursal p:nth-child(2) span").text(suc.lista[1].descripcion);
+				$("#datos_sucursal p:nth-child(3) span").text(suc.lista[1].horario);
+				$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_2_1.jpg");
+				$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_2_2.jpg");
+				
+				// Inicialización del API de google maps
+				initMap(-2.145274,-79.948906);
+			});
 		});
 	
 		//Datos usuario
 		var user;
 		$.getJSON("../json/usuario.JSON",function(response){
 			user = response;
+			$("#nombre_i").val(user.datos[0].nombre);
+			$("#apellido_i").val(user.datos[0].apellido);
+			$("#correo_i").val(user.datos[0].correo);
+			$("#cedula_i").val(user.datos[0].cedula);
+			$("#direccion_i").val(user.datos[0].direccion);
+			$("#telefono_i").val(user.datos[0].telefono);
+			$("#imagen_i").attr("src",user.datos[0].img);
 		});
 		
 		//Sucursales
@@ -101,45 +146,11 @@ function init(){
 	//Comportamiento de los exámenes
 	
 	
-	//Comportamiento de menú de sucursales
-	
-	//Sucursal_1
-	$(".dropdown-menu li:first-child a").click(function(){
-		$(".carousel-inner .item:first-child img").attr("src","");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","");
-		$("#datos_sucursal p:first-child span").text(suc.lista[0].direccion);
-		$("#datos_sucursal p:nth-child(2) span").text(suc.lista[0].descripcion);
-		$("#datos_sucursal p:nth-child(3) span").text(suc.lista[0].horario);
-		$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_1_1.jpg");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_1_2.jpg");
-		
-		// Inicialización del API de google maps
-		initMap(-2.148726,-79.9648);
-	});
-	
-	//Sucursal_2
-	$(".dropdown-menu li:nth-child(2) a").click(function(){
-		$(".carousel-inner .item:first-child img").attr("src","");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","");
-		$("#datos_sucursal p:first-child span").text(suc.lista[1].direccion);
-		$("#datos_sucursal p:nth-child(2) span").text(suc.lista[1].descripcion);
-		$("#datos_sucursal p:nth-child(3) span").text(suc.lista[1].horario);
-		$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_2_1.jpg");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_2_2.jpg");
-		
-		// Inicialización del API de google maps
-		initMap(-2.145274,-79.948906);
-	});
+
 	
 	//Comportamiento datos
 	//Cargar datos
-	$("#nombre_i").val(user.datos[0].nombre);
-	$("#apellido_i").val(user.datos[0].apellido);
-	$("#correo_i").val(user.datos[0].correo);
-	$("#cedula_i").val(user.datos[0].cedula);
-	$("#direccion_i").val(user.datos[0].direccion);
-	$("#telefono_i").val(user.datos[0].telefono);
-	$("#imagen_i").attr("src",user.datos[0].img);
+	
 	
 	//Comportamiento boton editar
 	$("#boton_editar").click(function(){
@@ -162,16 +173,7 @@ function init(){
 	});
 	
 	
-		$(".carousel-inner .item:first-child img").attr("src","");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","");
-		$("#datos_sucursal p:first-child span").text(suc.lista[0].direccion);
-		$("#datos_sucursal p:nth-child(2) span").text(suc.lista[0].descripcion);
-		$("#datos_sucursal p:nth-child(3) span").text(suc.lista[0].horario);
-		$(".carousel-inner .item:first-child img").attr("src","imagenes/surcursal_1_1.jpg");
-		$(".carousel-inner .item:nth-child(2) img").attr("src","imagenes/surcursal_1_2.jpg");
 		
-		// Inicialización del API de google maps
-		initMap(-2.148726,-79.9648);	
 	
 	
 }
