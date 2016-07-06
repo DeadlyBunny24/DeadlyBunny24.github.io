@@ -13,7 +13,7 @@ function init(){
 	//Operario
 		var ope = null;
 		$.getJSON("json/operario.JSON",function(response){
-			console.log(response);
+			ope = response;
 		});
 		
 
@@ -46,7 +46,7 @@ function init(){
 		$("#container_datos").show();	
 	});	
 	
-	//Comportamiento de los ex·menes
+	//Comportamiento de los ex√°menes
 	ope.lista.forEach(function(item){
 		$("#examenes_contenido").append("<tr>");
 		$("#examenes_contenido tr:last-child").append("<td>"+item.paciente+"</td>");
