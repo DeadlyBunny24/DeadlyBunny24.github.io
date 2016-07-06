@@ -44,7 +44,7 @@ function init(){
 	
 	//Comportamiento del menú principal
 	$(".menu li:nth-child(2) a").click(function(){
-		$(".breadcrumb li a").text("Reportes");
+		$(".breadcrumb li h2").text("Reportes");
 		$(".menu li:nth-child(2)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(2)").addClass("active");
 		$("#container_examenes").hide();
@@ -53,7 +53,7 @@ function init(){
 	});	
 
 	$(".menu li:nth-child(1) a").click(function(){
-		$(".breadcrumb li a").text("Examenes");
+		$(".breadcrumb li h2").text("Examenes");
 		$(".menu li:nth-child(1)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(1)").addClass("active");
 		$("#container_sucursales").hide();
@@ -62,7 +62,7 @@ function init(){
 	});
 
 	$(".menu li:nth-child(3) a").click(function(){
-		$(".breadcrumb li a").text("Registro");
+		$(".breadcrumb li h2").text("Información de registro");
 		$(".menu li:nth-child(3)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(3)").addClass("active");
 		$("#container_sucursales").hide();

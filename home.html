@@ -5,7 +5,7 @@
 		
 		<title>Salud Primero S.A.</title>
 		
-		<meta charset="utf-8">
+		<meta charset="ISO-8859-1">
 		<meta name="description" content="Pag. principal de un paciente">
 		<meta name="keywords" content="paciente, salud, primero, sa">
 		
@@ -15,7 +15,7 @@
 		<link href="bootstrap-edit.css" rel="stylesheet">
 		
 		<link rel="stylesheet" type="text/css" href="stylesheets/paciente_style.css">
-
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     </style>
 	</head>
 
@@ -56,9 +56,7 @@
         <div id="contenedor_info" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ">
 	        <div id="navegacion" class="row">
 	        	<ol class="breadcrumb" style="    margin-bottom: 0px;">
-				  <li><a href="#">Examenes</a></li>
-				  <!-- <li><a href="#">Library</a></li>
-				  <li class="active">Data</li> -->
+				  <li><h2>Examenes</h2></li>
 				</ol>
 	        </div>
 	        
@@ -83,7 +81,7 @@
 					<div id="container_sucursales">
 						<!--Seleccion de sucursales-->
 						<div id="menu_sucursales" class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-bottom: 10px;">Sucursales
+							<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-bottom: 10px;">Elegir Sucursal
 							<span class="caret"></span></button>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
 							  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sucursal 1</a></li>
@@ -93,16 +91,15 @@
 						
 					
 						<!--Opcion: Sucursales-->
-						<div id = "datos_sucursal" class="col-md-4">
-							<p><b> Dirección:   </b><span></span></p>
-							<p><b> Descripción:</b><span></span></p>
-							<p><b> Horarios:    </b><span></span></p>
-						</div>
 						
-						<div id="map" class="col-md-7"></div>
-						
-						<!-- Implementación utilizando carousel de bootstrap-->		
-						<div id="fotografias" class="carousel slide col-md-4" data-ride="carousel">
+						<div id="informacion_datos_sucursal" class="col-md-5">
+							<div id = "datos_sucursal" >
+								<p><b> Dirección:   </b><span></span></p>
+								<p><b> Descripción:</b><span></span></p>
+								<p><b> Horarios:    </b><span></span></p>
+							</div>
+							
+							<div id="fotografias" class="carousel slide" data-ride="carousel">
 							  <!-- Indicators -->
 							  <ol class="carousel-indicators">
 								<li data-target="#fotografias" data-slide-to="0" class="active"></li>
@@ -128,16 +125,21 @@
 								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							  </a>
+							</div>
 						</div>
+						<div id="map" class="col-md-6"></div>
+						
+						<!-- Implementación utilizando carousel de bootstrap-->		
+						
 					</div>	
 					
 					<div id="container_datos">	
 						<div class="panel panel-blue margin-bottom-40">
-							<div class="panel-heading">
+							<!-- <div class="panel-heading">
 								<h3 class="panel-title"><i class="fa fa-tasks"></i> Datos Personales</h3>
-							</div>
+							</div> -->
 							<div class="panel-body">
-								<img id="imagen_i" src="-" alt="imagen_usuario">
+								<img id="imagen_i" src="#" alt="imagen_usuario">
 								<form class="margin-bottom-40" id="datos_form" role="form">
 									<div class="form-group" id="form_nombre">
 										<label for="nombre">Nombre</label>
@@ -153,7 +155,7 @@
 									</div>
 									<div class="form-group" id="form_cedula">
 										<label for="cedula">Cédula</label>
-										<input type="text" class="form-control" id="cedula_i" placeholder="Cédula" readonly>
+										<input type="number" class="form-control" id="cedula_i" placeholder="Cédula" readonly>
 									</div>
 									<div class="form-group" id="form_direccion">
 										<label for="direccion">Dirección</label>
@@ -183,11 +185,10 @@
 
 		<!-- Scripts -->
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="javascripts/paciente_script.js"></script>	
-		<script src="https://maps.googleapis.com/maps/api/js?" async defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcLo8bParriMgAdAOKEW-z71cTmLs6ZJs" async defer></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		
+		<script src="javascripts/paciente_script.js"></script>
 		
 		
 	</body>

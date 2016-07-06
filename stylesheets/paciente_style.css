@@ -1,14 +1,14 @@
-html, body{ height: 100%;}
+html, body{ height: 100%;font-family: 'Source Sans Pro', sans-serif;}
 #menu_sucursales ul{margin-top:16px;}
 #navegacion {min-width:100%;margin-left:0px;}
 #contenedor{height:100%;}
 #contenedor_general{height:90%;}
 #contenedor_info{height:100%;padding-left:0px;}
-#contenedor_datos{height:100%;}
-#map {height: 307px;float:right; box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);}
-.carousel{height:200px;float:left;box-shadow: 0 0 3px #888888;}
+#contenedor_datos{height:100%;background-color: whitesmoke;}
+#map {height: 330px;box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);padding:0 5px;}
+.carousel{height:200px;box-shadow: 0 0 3px #888888;margin-bottom:10px;}
 .carousel-inner{height:100%;}
-#datos_sucursal{margin-bottom:10px;background: rgba(217, 217, 217,0.3);padding-top:5px;box-shadow: 0 0 3px #888888;}
+#datos_sucursal{margin-bottom:10px;background: rgba(217, 217, 217,0.3);padding:15px;box-shadow: 0 0 3px #888888;}
 .item{align-items:center;height:100%;}
 .carousel-inner .item img{min-width:100%;min-height:100%;flex-shrink:0;}
 #form_nombre{width:80%;}
@@ -17,10 +17,10 @@ html, body{ height: 100%;}
 #form_cedula{width:60%;}
 #form_telefono{width:60%;}
 #form_direccion{width:100%;}
-#container_datos{ width:70%;box-shadow: 0 0 3px #888888;}
+#container_datos{ box-shadow: 0 0 3px #888888;}
 #container_datos img{height:30%; width:30%;margin-left: auto;margin-right: auto;position:relative;margin-top:auto;}
 .panel-body form{float:left;width:70%;}
-
+.breadcrumb h2{color:#428bca;}
 
 #circle_espera{
       width: 21px;

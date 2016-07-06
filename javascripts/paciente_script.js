@@ -44,7 +44,7 @@ function init(){
 	
 	//Comportamiento del menú principal
 	$(".menu li:nth-child(2) a").click(function(){
-		$(".breadcrumb li a").text("Sucursales");
+		$(".breadcrumb li h2").text("Sucursales");
 		$(".menu li:nth-child(2)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(2)").addClass("active");
 		$("#container_examenes").hide();
@@ -53,7 +53,7 @@ function init(){
 	});	
 
 	$(".menu li:nth-child(1) a").click(function(){
-		$(".breadcrumb li a").text("Examenes");
+		$(".breadcrumb li h2").text("Examenes");
 		$(".menu li:nth-child(1)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(1)").addClass("active");
 		$("#container_sucursales").hide();
@@ -62,7 +62,7 @@ function init(){
 	});
 
 	$(".menu li:nth-child(3) a").click(function(){
-		$(".breadcrumb li a").text("Datos Personales");
+		$(".breadcrumb li h2").text("Datos Personales");
 		$(".menu li:nth-child(3)").siblings("li").removeClass("active");
 		$(".menu li:nth-child(3)").addClass("active");
 		$("#container_sucursales").hide();
@@ -128,9 +128,9 @@ function init(){
 	$("#telefono_i").val(user.datos[0].telefono);
 	$("#imagen_i").attr("src",user.datos[0].img);
 	
-	//Comportamiento boton actualizar
+	//Comportamiento boton editar
 	$("#boton_editar").click(function(){
-		$("#nombre_i").prop('readonly', false);
+		$("#nombre_i").prop('disabled', false);
 		$("#apellido_i").prop('readonly', false);
 		$("#correo_i").prop('readonly', false);
 		$("#cedula_i").prop('readonly', false);
