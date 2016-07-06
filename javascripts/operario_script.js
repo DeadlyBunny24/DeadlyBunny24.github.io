@@ -17,6 +17,7 @@ function init(){
 		});
 		
 
+		
 	
 	//Comportamiento del menú principal
 	$(".menu li:nth-child(2) a").click(function(){

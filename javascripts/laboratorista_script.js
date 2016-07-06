@@ -4,7 +4,10 @@ $( document ).ready(function() {
 
 function init(){
 		//Laboratorista
-		var lab = $.getJSON("json/laboratorio.JSON");
+		var lab = null;
+		$.getJSON("json/examenes.JSON",function(response){
+			lab = response;
+		});
 	
 	//Comportamiento de los exámenes
 	lab.lista.forEach(function(item){

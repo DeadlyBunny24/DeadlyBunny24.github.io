@@ -11,13 +11,22 @@ function init(){
 	
 	// Objetos de datos
 		//Examenes
-		var exa = $.getJSON("json/examenes.JSON");
-		
+		var exa = null;
+		$.getJSON("json/examenes.JSON",function(response){
+			exa = response;
+		});
+				
 		//Sucursales
-		var suc = $.getJSON("json/sucursales.JSON");
+		var suc = null;
+		$.getJSON("json/sucursales.JSON",function(response){
+			suc = response;
+		});
 	
 		//Datos usuario
-		var user = $.getJSON("json/usuario.JSON");
+		var user = null;
+		$.getJSON("json/examenes.JSON",function(response){
+			user = response;
+		});
 		
 		//Sucursales
 		/* var suc = jQuery.parseJSON('{"lista":[\
