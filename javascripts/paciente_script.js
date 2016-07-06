@@ -134,13 +134,7 @@ function init(){
 		$(".menu li:nth-child(3)").addClass("active");
 		$("#container_sucursales").hide();
 		$("#container_examenes").hide();
-		$("#container_datos").show();	
-		$("#nombre").val(user.datos.nombre);
-		$("#apellido").val(user.datos.apellido);
-		$("#correo").val(user.datos.correo);
-		$("#cedula").val(user.datos.cedula);
-		$("#direccion").val(user.datos.direccion);
-		$("#telefono").val(user.datos.telefono);		
+		$("#container_datos").show();		
 	});	
 	
 	//Comportamiento de los exámenes

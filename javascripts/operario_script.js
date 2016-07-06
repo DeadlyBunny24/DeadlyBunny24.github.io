@@ -17,6 +17,17 @@ function init(){
 		var ope;
 		$.getJSON("../json/operario.JSON",function(response){
 			ope = response;
+			ope.lista.forEach(function(item){
+				$("#examenes_contenido").append("<tr>");
+				$("#examenes_contenido tr:last-child").append("<td>"+item.paciente+"</td>");
+				$("#examenes_contenido tr:last-child").append("<td>"+item.centro+"</td>");
+				$("#examenes_contenido tr:last-child").append("<td>"+item.examen+"</td>");
+				$("#examenes_contenido tr:last-child").append('<td>'+			
+					'<button class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editar"></i> Editar</button>'+
+					'&thinsp;'+
+					'<button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#eliminar"><i class="glyphicon glyphicon-trash"></i> Borrar</button>'+
+					'</td>');	
+			});	
 		});		
 	
 	
@@ -49,17 +60,7 @@ function init(){
 	});	
 	
 	//Comportamiento de los exÃ¡menes
-	ope.lista.forEach(function(item){
-		$("#examenes_contenido").append("<tr>");
-		$("#examenes_contenido tr:last-child").append("<td>"+item.paciente+"</td>");
-		$("#examenes_contenido tr:last-child").append("<td>"+item.centro+"</td>");
-		$("#examenes_contenido tr:last-child").append("<td>"+item.examen+"</td>");
-		$("#examenes_contenido tr:last-child").append('<td>'+			
-			'<button class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#editar"></i> Editar</button>'+
-			'&thinsp;'+
-			'<button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#eliminar"><i class="glyphicon glyphicon-trash"></i> Borrar</button>'+
-			'</td>');	
-	});	
+	
 	
 	//Compañero
 		var parseTime = d3.timeParse("%M");
